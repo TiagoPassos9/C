@@ -67,28 +67,28 @@ int ordena(tipoLista *L){
 }
 	
 int BuscaLista (tipoLista *L, int AL, int i, int f){
-		int mid, achou=0;
-	    mid= (i+f)/2;
-		while ((achou==0 ) && (i<=f) ) {
-		   if (L->alunos[mid].mat==AL) {
-		   	   achou=1;
-		   	   return mid;
-		    }else{
-				if (L->alunos[mid].mat<AL){
-				   i=mid+1;
-				   mid=recusivo(i,f);
-				}else{
-				    if (L->alunos[mid].mat>AL)	{
-				      f=mid-1;
-					  mid=recusivo(i,f);
-					} 
-			    }
-			}    
-	  }
-	  if (achou==0){ 
-	    return -1;
-	  }		
+	int mid, achou=0;
+	mid= (i+f)/2;
+	while ((achou==0) && (i<=f) ) {
+	   if (L->alunos[mid].mat==AL) {
+	   	   	achou=1;
+	   	   	return mid;
+	    }else{
+			if (L->alunos[mid].mat<AL){
+			   	i=mid+1;
+			   	mid=recusivo(i,f);
+			}else{
+			    if (L->alunos[mid].mat>AL)	{
+			      	f=mid-1;
+				  	mid=recusivo(i,f);
+				} 
+		    }
+		}    
 	}
+	if (achou==0){ 
+		return -1;
+	}		
+}
 
 void imprimir(tipoLista L){
 	int aux; 
@@ -113,7 +113,6 @@ int main(){
 		printf("*********************************************\n");
 		scanf("%d",&op);
 		switch (op){
-		
 		case 1:
 			system("cls");
 			printf("Informe a matrícula: ");
@@ -162,5 +161,5 @@ int main(){
 			break;
 		}
 	}
-return 0;
+	return 0;
 }
