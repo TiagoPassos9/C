@@ -58,6 +58,20 @@ void ordenaD() {
 		ptr=vet;
 	}
 }
+void inverte() {
+	int aux [i];
+	ptr=aux;
+	for (int z=(i-1); z>=0; z--) {
+		int w = 0;
+		*ptr = x[z];
+		ptr++;
+	}
+	ptr=x;
+	for (int z = 0; z<i; z++) {
+		*ptr = aux[z];
+		ptr++;
+	}
+}
 
 //Função para mostrar os números do vetor:
 void mostrar() {
